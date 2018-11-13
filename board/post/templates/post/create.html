@@ -1,0 +1,13 @@
+{% extends 'post/base.html' %}
+
+{% block body_block %}
+<!--폼을 넣어야 함-->
+    
+    <form action="{% url 'post:create' %}" method="post">
+        {% csrf_token %}
+        {{form}}
+        <input type='submit'/>
+    </form>
+    
+
+{% endblock %}
