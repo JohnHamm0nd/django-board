@@ -1,0 +1,14 @@
+{% extends 'post/base.html' %}
+
+{% block body_block %}
+    <p><h3>{{post.title}}</h3></p>
+    <!--방법1 filter 사용-->
+    <p>{{post.content|safe}}</p>
+
+    <!--방법2 autoescape 사용-->
+    <!--{% autoescape off %}-->
+    <!--{{post.content}}-->
+    <!--{% endautoescape %}-->
+
+
+{% endblock %}
