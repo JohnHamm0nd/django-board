@@ -5,6 +5,9 @@
     <!--방법1 filter 사용-->
     <p>{{post.content|safe}}</p>
 
+    <a href="{% url 'post:update' id=post.id %}">수정</a>
+    <a href="{% url 'post:delete' id=post.id %}">삭제</a>
+
     <!--방법2 autoescape 사용-->
     <!--{% autoescape off %}-->
     <!--{{post.content}}-->
